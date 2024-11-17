@@ -83,7 +83,6 @@ class Solution:
 
         if not root:
             return
-        
         # Inorder traversal: Go left -> property check -> go right
         self.find_swapped_nodes(root.left)
 
