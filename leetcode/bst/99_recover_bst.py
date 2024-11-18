@@ -3,6 +3,26 @@ This module contains the implementation of a solution to recover a binary
 search tree where two nodes have been swapped.
 """
 
+# Definition for a binary tree node.
+class TreeNode:
+    """
+    A TreeNode class.
+
+    Attributes:
+    ----------
+    val : int
+        The nodes value
+    left : TreeNode
+        The left child of the node
+    right : TreeNode
+        The right child of the node
+    """
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
+
 class Solution:
     """
     A solution class to recover a BST.

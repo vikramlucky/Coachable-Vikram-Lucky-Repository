@@ -3,7 +3,7 @@ This module contains the implementation of a solution to Binary tree maximum pat
 """
 
 # Definition for a binary tree node.
-class TreeNode:
+class TreeNode1:
     """
     A TreeNode class.
 
@@ -43,7 +43,7 @@ class Solution:
     def __init__(self, maximum_path_sum = float("-inf")):
         self.maximum_path_sum = maximum_path_sum
 
-    def calculate_path_sum(self, node: TreeNode):
+    def calculate_path_sum(self, node: TreeNode1):
         """
         A helper function:
         Calculates maximum path sum
@@ -59,7 +59,7 @@ class Solution:
 
         return max(left, right) + node.val
 
-    def max_path_sum(self, root: TreeNode) -> int:
+    def max_path_sum(self, root: TreeNode1) -> int:
         """
         Main Function: 
         -Calls helper function and returns the result
