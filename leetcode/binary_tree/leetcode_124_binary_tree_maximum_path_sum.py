@@ -33,7 +33,7 @@ class Solution:
 
     Methods:
     -------
-    maxPathSum(root: TreeNode) -> int:
+    max_path_sum(root: TreeNode) -> int:
         Main function, calls helper function and returns the result.
     
     calculate_path_sum(root: TreeNode) -> int:
