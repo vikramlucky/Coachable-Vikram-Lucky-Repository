@@ -22,7 +22,6 @@ class TreeNode:
         self.right = right
 
 class Solution:
-    
     """
     A solution class to get maximum path.
 
@@ -59,7 +58,7 @@ class Solution:
         self.maximum_path_sum = max(self.maximum_path_sum, curr_sum)
 
         return max(left, right) + node.val
-      
+
     def max_path_sum(self, root: TreeNode) -> int:
         """
         Main Function: 
@@ -68,5 +67,3 @@ class Solution:
 
         self.calculate_path_sum(root)
         return self.maximum_path_sum
-
-
