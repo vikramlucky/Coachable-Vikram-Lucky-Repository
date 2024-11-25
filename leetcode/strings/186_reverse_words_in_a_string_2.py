@@ -1,7 +1,7 @@
 """186 reverse words in a string"""
 
 class Solution:
-    
+
     def reverse(self, start: int, end: int, words: list) -> None:
         """
         Helper function takes list, starting index and ending index.
@@ -17,11 +17,9 @@ class Solution:
         """
         Do not return anything, modify s in-place instead.
         """
-        
         n = len(s)
         if n == 0:
             return s
-        
         # First Step: Reverse the list
         self.reverse(0, n - 1, s)
 
@@ -35,6 +33,4 @@ class Solution:
                 self.reverse(start_idx, end_idx - 1, s)
                 start_idx = end_idx + 1
             end_idx += 1
-        
         return s
-    
