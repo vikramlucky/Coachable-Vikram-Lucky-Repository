@@ -2,9 +2,11 @@
 871. Minimum Number of Refueling Stops
 
 Problem Statment: A car: starting point --> destination (target)
-input: Stations -> [[10,60],[20,30],[30,30],[60,40]], where 0th position is distance, and 1st is fuel 
+input: Stations -> [[10,60],[20,30],[30,30],[60,40]], where 0th position is 
+distance, and 1st is fuel 
 
-TASK: Return the minimum number of refueling stops the car must make in order to reach its destination. 
+TASK: Return the minimum number of refueling stops the car
+ must make in order to reach its destination. 
 If it cannot reach the destination, return -1.
 
 starting from position 0 and goign to position 10, with 10 fuel 
@@ -34,7 +36,8 @@ Approach:
     -> setup a max heap (to keep track of gas available along the way)
     -> stop variable will keep track of stops we made
     -> Make first check: check if its possible to reach 0th index stop:
-            -> If un reachable simple rturn -1, otherwise update the fuel, add 0th index fuel in max heap
+            -> If un reachable simple rturn -1, otherwise update the fuel,
+              add 0th index fuel in max heap
     -> run loop on stations starting from 1 till n (n is the length of updates stations)
 
         -> update the gas:
