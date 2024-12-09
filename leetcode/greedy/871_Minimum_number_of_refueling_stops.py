@@ -78,7 +78,7 @@ class Solution:
         for i in range(1, len(stations)):
             curr_fuel -= (stations[i][0] - stations[i - 1][0])
 
-            while len(max_heap) > 0 and curr_fuel < 0:
+            while len(max_heap) > 0 > curr_fuel:
                 stops += 1
                 curr_fuel += -heapq.heappop(max_heap)
 
