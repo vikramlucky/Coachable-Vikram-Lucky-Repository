@@ -20,6 +20,7 @@ class Solution:
 
         if n == 0:
             return cost
+
         sorted_costs = sorted(costs, key = lambda x: x[0] - x[1])
 
         for i in range(half):
