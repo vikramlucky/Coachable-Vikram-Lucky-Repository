@@ -14,13 +14,12 @@ class Solution:
 	        3.	Compute the total cost: Sum up the costs based on these assignments and 
             return the result.
         """
-
         cost = 0
         n = len(costs)
         half = n // 2
 
         if n == 0:
-            return cost 
+            return cost
         sorted_costs = sorted(costs, key = lambda x: x[0] - x[1])
 
         for i in range(half):
