@@ -49,7 +49,7 @@ class Solution:
                 if curr_node.right:
                     q.append(curr_node.right)
                 if curr_node.left:
-                    q.append(curr_node.left)   
+                    q.append(curr_node.left)
                 prev = curr_node
 
         return root
