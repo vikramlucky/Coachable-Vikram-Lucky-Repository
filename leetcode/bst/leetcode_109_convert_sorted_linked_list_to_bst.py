@@ -15,9 +15,9 @@ class TreeNode:
 # Definition for singly-linked list.
 class ListNode:
     """A definition of ListNode class"""
-    def __init__(self, val=0, next=None):
+    def __init__(self, val=0, next_node=None):
         self.val = val
-        self.next = next
+        self.next_node = next_node
 
 class Solution:
     """A solution class"""
