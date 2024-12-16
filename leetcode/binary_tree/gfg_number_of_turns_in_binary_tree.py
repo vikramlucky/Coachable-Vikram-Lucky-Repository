@@ -10,11 +10,11 @@ Example 1:
 Input:      
 Tree = 
            1
-        /    \
+        /    \\
        2       3
-     /  \     /  \
+     /  \\     /  \\
     4    5   6    7                        
-   /        / \                        
+   /        / \\                        
   8        9   10   
 first node = 5
 second node = 10
@@ -26,11 +26,11 @@ Example 2:
 Input:      
 Tree = 
            1
-        /     \
+        /    \\
        2        3
-     /  \      /  \
+     / \\      / \\
     4    5    6    7                        
-   /         / \                        
+   /         / \\                        
   8         9   10   
 first node = 1
 second node = 4  
@@ -41,7 +41,7 @@ they are in a straight line.
 Example 3 Input:
 
         7
-       / \
+       / \\
       5   10
 
 first node = 5
@@ -51,10 +51,10 @@ Output: 1
 Example 4 Input:
         
         5
-         \
+         \\
           7
-           \
-            10
+           \\
+             10
 
 first_node = 5
 second_node = 10            
@@ -70,7 +70,7 @@ class Solution:
         """Find the lowest common ancestor of two nodes."""
         if not root:
             return None
-        if root.data == first or root.data == second:
+        if root.data in (first, second):
             return root
 
         left = self.find_lca(root.left, first, second)
@@ -132,7 +132,7 @@ class Solution:
         turns_from_second = self.total_turns
 
         # If the nodes are on different subtrees, add 1 turn at the LCA
-        if lca.data != first and lca.data != second:
+        if lca.data not in (first, second):
             return turns_from_first + turns_from_second + 1
 
         # If one of the nodes is the LCA, just return the turns to the other node
