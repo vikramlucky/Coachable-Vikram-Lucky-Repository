@@ -30,7 +30,7 @@ Optimal solution:
 	    •	Each element contributes:
             arr[i] * (distance to left) * (distance to right)
 	    •	Sum up contributions for all elements.
-        
+         
 	3.	Modulo Operation:
 	    •	Use modulo 10^9 + 7 to handle large numbers.
 '''
