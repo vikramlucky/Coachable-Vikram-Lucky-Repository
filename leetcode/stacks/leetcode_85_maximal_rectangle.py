@@ -28,7 +28,7 @@ class Solution:
         next_min_left = [-1] * n
 
         for idx, n in enumerate(arr):
-            while len(stack) and arr[stack[-1]] > n:
+            while len(stack) > 0 and arr[stack[-1]] > n:
                 next_min_right[stack.pop()] = idx
             next_min_left[idx] = stack[-1] if len(stack) > 0 else -1
             stack.append(idx)
