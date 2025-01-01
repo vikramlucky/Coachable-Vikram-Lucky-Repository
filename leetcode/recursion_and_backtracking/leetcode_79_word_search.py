@@ -28,17 +28,17 @@ class Solution:
 
         for r in range(ROWS):
             for c in range(COLS):
-                if board[r][c] == word[0] and self.found(0, word, board, r, c):
+                if board[r][c] == word[0] and self.found(0, word, board, (r, c)):
                     return True
         return False
 
-    def found(self, idx: int, word: str, board: List[List[str]], r: int, c: int):
+    def found(self, idx: int, word: str, board: List[List[str]], pos: tuple):
         '''Helper backtrack function'''
 
         #Base case
         if idx + 1 >= len(word):
             return True
-
+        r,c = pos
         curr_ch = board[r][c]
         board[r][c] = '*'
 
@@ -49,7 +49,7 @@ class Solution:
             if 0 <= new_r < len(board) and 0 <= new_c < len(board[0]):
 
                 if word[idx + 1] == board[new_r][new_c]:
-                    if self.found(idx + 1, word, board, new_r, new_c):
+                    if self.found(idx + 1, word, board, (new_r, new_c)):
                         board[r][c] = curr_ch
                         return True
         board[r][c] = curr_ch

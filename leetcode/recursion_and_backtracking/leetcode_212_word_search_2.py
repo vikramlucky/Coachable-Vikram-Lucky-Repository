@@ -43,12 +43,12 @@ class Solution:
         for i, row in enumerate(board):
             for j, ch in enumerate(row):
                 if ch in root.children:
-                    self.backtrack(i, j, result, board, root)
+                    self.backtrack((i, j), result, board, root)
         return list(result)
 
-    def backtrack(self, x: int, y: int, res: set, board: List[List[str]], root: TrieNode):
+    def backtrack(self, pos: tuple, res: set, board: List[List[str]], root: TrieNode):
         '''Helper backtracking function'''
-
+        x, y = pos
         curr_ch = board[x][y]
         curr_node = root.children[curr_ch]
 
@@ -62,7 +62,7 @@ class Solution:
 
             is_bound = 0 <= new_x < len(board) and 0 <= new_y < len(board[0])
             if is_bound and board[new_x][new_y] in curr_node.children:
-                self.backtrack(new_x, new_y, res, board, curr_node)
+                self.backtrack((new_x, new_y), res, board, curr_node)
 
         board[x][y] = curr_ch
 
